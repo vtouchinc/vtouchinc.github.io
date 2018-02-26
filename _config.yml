@@ -1,0 +1,64 @@
+title: vtouch 기술 블로그
+email: dev@vtouch.io
+description: |
+baseurl: ''
+url: ''
+timezone: Asia/Seoul 
+
+repository: vtouchinc/vtouchinc.github.io
+
+permalink: /:year/:month/:day/:title/
+
+excerpt_separator: <!--more-->
+
+markdown: kramdown
+
+krandown:
+  input: GFM
+  highlighter: rouge
+
+plugins:
+  - jekyll-paginate
+
+paginate: 5
+paginate_path: '/page/:num/'
+
+collections:
+  authors:
+    output: true
+    permalink: /authors/:path/
+  tags:
+    output: true
+    permalink: /tags/:path/
+
+defaults:
+  - scope:
+      path: ''
+      type: authors
+    values:
+      layout: author
+  - scope:
+      path: ''
+      type: tags
+    values:
+      layout: tag
+
+exclude: [README.md, Gemfile, Gemfile.lock]
+
+keep_files: [assets, files]
+github: [metadata]
+# iolo's custom
+author: dev@vtouch.io
+asset_url: /assets
+
+google_analytics:
+  ua: 'UA-114732132-1'
+#facebook:
+#  app_id: '1204347326263800'
+#  username: vtouch
+#twitter:
+#  username: vtouch
+#google_plus:
+#  username: vtouch
+github_url:
+  username: vtouchinc
